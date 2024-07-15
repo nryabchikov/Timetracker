@@ -1,7 +1,7 @@
 package by.krainet.timetracker.controller;
 
-import by.krainet.timetracker.model.User;
 import by.krainet.timetracker.service.UserService;
+import by.krainet.timetracker.model.User;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +24,7 @@ public class UserController {
         return userService.getUserById(id);
     }
 
-    @PostMapping
+    @PostMapping("/new")
     public User addUser(@RequestBody User user) {
         return userService.addUser(user);
     }
